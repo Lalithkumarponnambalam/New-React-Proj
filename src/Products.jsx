@@ -3,6 +3,7 @@ import product1 from './images/services-01.jpg';
 import product2 from './images/services-02.jpg';
 import product3 from './images/services-04.jpg';
 import product4 from './images/services-05.jpg';
+import "./App.css";
 
 function Products() {
     return (

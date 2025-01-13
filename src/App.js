@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./Products";
 import bgImage from './images/hero-bg.jpg';
 import Contact from './Contact';
+import Home from './Home';
 
 // Define the Hero Section component to be used in each route
 const HeroSection = ({ title, subtitle, bgImage, height }) => {
@@ -39,8 +40,8 @@ function App() {
               element={
                 <>
                   <HeroSection
-                    title="Welcome to My React App"
-                    subtitle="This is a fully responsive design with Bootstrap"
+                    title="We are Global Manufacturing Leader"
+                    subtitle="As a leading global manufacturing company, we pride ourselves in setting industry standards through our commitment to producing high-quality products and providing innovative solutions to cater to the diverse needs of our customers."
                     bgImage={bgImage}
                     height="105vh"
                   />
@@ -81,12 +82,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={
-                <div>
-                  <h2>Homepage Content</h2>
-                  <p>This is additional content outside the hero section for the homepage.</p>
-                </div>
-              }
+              element={<Home />}
             />
             <Route
               path="/products"
