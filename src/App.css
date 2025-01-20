@@ -7,6 +7,10 @@
   display: none; /* Chrome, Safari, Edge */
 }
 
+.description-text {
+  color: #727272;
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -69,10 +73,15 @@
 
 .navbar .navbar-nav .nav-link {
   color: white;
+  transition: color 0.3s ease;
 }
 
 .navbar .navbar-nav .nav-link:hover {
-  color: #f1f1f1;
+  color: #ffbc2b;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  color: #ff9e01;
 }
 
 .navbar .navbar-toggler {
@@ -86,4 +95,59 @@
 .navbar-brand {
   font-weight: bold;
   color: white;
+}
+
+/* homepage styles */
+.year-text {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #ffbc2b;
+}
+
+.why-title {
+  width: 70%;
+  font-size: 38px;
+}
+
+.why-img-second {
+  margin-top: -15%;
+}
+
+/* contact-us styles */
+.send-msg-btn {
+  background-color: #ffbc2b;
+  border: none;
+  padding: 10px 36px;
+  font-weight: 400;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.form-control.bg-light {
+  background-color: #f9fafb !important;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+@media (max-width: 991.98px) {
+  .collapse.navbar-collapse {
+    background-color: white;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  .why-img-second {
+    margin-top: 0%;
+  }
+
+  .why-title {
+    width: 100%;
+  }
 }

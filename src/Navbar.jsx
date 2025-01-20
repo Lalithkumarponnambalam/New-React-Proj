@@ -4,12 +4,12 @@ import './App.css';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <nav className="navbar navbar-expand-lg bg-transparent">
       <div className="container">
         <Link className="navbar-brand" to="/">
           My React App
         </Link>
-        <button
+        <a
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -18,22 +18,32 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          <svg
+            className="ast-mobile-svg ast-menu2-svg"
+            fill="white"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="28"
+            viewBox="0 0 24 28"
+          >
+            <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+          </svg>
+        </a>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link fs-6 mx-3" to="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/products">
+              <Link className="nav-link fs-6 mx-3" to="/products">
                 Products
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <Link className="nav-link fs-6 mx-3" to="/contact">
                 Contact
               </Link>
             </li>

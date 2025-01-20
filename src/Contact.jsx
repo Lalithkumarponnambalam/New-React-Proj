@@ -6,9 +6,9 @@ function Contact() {
     <div className="container p-5">
       <div className="row">
         {/* Left column (Company Info) */}
-        <div className="col-md-4">
-          <h2>Contact Us</h2>
-          <p>Our company is located at:</p>
+        <div className="col-md-4 mb-4 mb-md-0">
+          <h2>Let’s get connected</h2>
+          <p>Please feel free to get in touch on the contact details provided below:</p>
           <address>
             1234 Business Ave, <br />
             City, Country <br />
@@ -24,45 +24,48 @@ function Contact() {
             {/* Name input */}
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
-                Name
+                Name <span className="text-danger">*</span>
               </label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control bg-light"
                 id="name"
-                placeholder="Enter your name"
+                placeholder=""
+                required
               />
             </div>
 
             {/* Email input */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
-                Email
+                Email <span className="text-danger">*</span>
               </label>
               <input
                 type="email"
-                className="form-control"
+                className="form-control bg-light"
                 id="email"
-                placeholder="Enter your email"
+                placeholder=""
+                required
               />
             </div>
 
             {/* Message textarea */}
             <div className="mb-3">
               <label htmlFor="message" className="form-label">
-                Message
+                Message <span className="text-danger">*</span>
               </label>
               <textarea
-                className="form-control"
+                className="form-control bg-light"
                 id="message"
                 rows="4"
-                placeholder="Enter your message"
+                placeholder=""
+                required
               ></textarea>
             </div>
 
             {/* Submit Button */}
-            <button type="submit" className="btn btn-primary">
-              Submit
+            <button type="submit" className="send-msg-btn">
+              Send Message
             </button>
           </form>
         </div>
