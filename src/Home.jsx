@@ -7,7 +7,7 @@ import "./App.css";
 
 function Home() {
     return (
-        <>
+        <div>
             <section style={{ backgroundColor: "#edeeef" }}>
                 <div className="container p-5">
                     <h2 className="text-center">How we create an impact on the world</h2>
@@ -97,7 +97,89 @@ function Home() {
                     </div>
                 </div>
             </section>
-        </>
+
+            <section className="container">
+                <div className="table-responsive mx-auto" style={{ maxWidth: '100%' }}>
+                    <table className="table table-bordered table-hover caption-top">
+                        {/* <caption>Chemical Composition</caption> */}
+                        <thead className="thead-warning">
+                            <tr>
+                                <th scope="col">Characteristic / Defect</th>
+                                <th scope="col">Cut Wire</th>
+                                <th scope="col">Cast Steel Shots</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Particle Shape</td>
+                                <td>≤ 5% (tighter tolerance, fewer unacceptable shapes)</td>
+                                <td>Marginal and unacceptable shapes
+                                    – looser tolerance compared to cut
+                                    wire</td>
+                            </tr>
+                            <tr>
+                                <td>Voids</td>
+                                <td>≤ 10%</td>
+                                <td>≤ 15%</td>
+                            </tr>
+                            <tr>
+                                <td>Shrinkage</td>
+                                <td>≤ 10%</td>
+                                <td>≤ 15%</td>
+                            </tr>
+                            <tr>
+                                <td>Cracks</td>
+                                <td>≤ 15%</td>
+                                <td>≤ 15%</td>
+                            </tr>
+                            <tr>
+                                <td>Microstructure</td>
+                                <td>Homogeneous structure,
+                                    fewer inconsistencies</td>
+                                <td>Slight variations in microstructure
+                                    due to casting process</td>
+                            </tr>
+                            <tr>
+                                <td>Screening</td>
+                                <td>Tighter than SAE J444 (for
+                                    more precision)</td>
+                                <td>Looser screening, more variation in
+                                    size and shape</td>
+                            </tr>
+                            <tr>
+                                <td>Hardness
+                                    Uniformity</td>
+                                <td>High uniformity due to
+                                    manufacturing precision</td>
+                                <td>Can have less uniform hardness
+                                    due to casting process</td>
+                            </tr>
+                            <tr>
+                                <td>Durability</td>
+                                <td>Higher durability (less wear
+                                    and tear in applications)</td>
+                                <td>Less durable, may wear faster
+                                    depending on casting quality</td>
+                            </tr>
+                            <tr>
+                                <td>Surface Quality</td>
+                                <td>Smoother surface, minimal
+                                    defects</td>
+                                <td>Can have rougher surface, leading
+                                    to potential surface damage</td>
+                            </tr>
+                            <tr>
+                                <td>Shape Consistency</td>
+                                <td>Highly consistent, sharp and
+                                    uniform (ideal for precision)</td>
+                                <td>More variation in shape, often
+                                    irregular and more aggressive</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
     );
 }
 

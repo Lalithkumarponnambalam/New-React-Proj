@@ -2,10 +2,13 @@ import React from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from "./Products";
-import bgImage from './images/hero-bg.jpg';
-import Contact from './Contact';
-import Home from './Home';
+import bgImage from "./images/hero-bg.jpg";
+import Contact from "./Contact";
+import Home from "./Home";
+import Application from "./Application";
+import Footer from "./Footer";
 
 // Define the Hero Section component to be used in each route
 const HeroSection = ({ title, subtitle, bgImage, height }) => {
@@ -21,7 +24,7 @@ const HeroSection = ({ title, subtitle, bgImage, height }) => {
       }}
     >
       <h1>{title}</h1>
-      <p className="mx-auto w-50">{subtitle}</p>
+      <p className="mx-auto">{subtitle}</p>
     </div>
   );
 };
@@ -74,27 +77,34 @@ function App() {
                 </>
               }
             />
+            <Route
+              path="/application"
+              element={
+                <>
+                  <HeroSection
+                    title="Application"
+                    subtitle="Our team of experts is ready to provide top-notch manufacturing solutions tailored to your needs. Contact us today for a consultation and let us take your production processes to the next level."
+                    bgImage={bgImage}
+                    height="50vh"
+                  />
+                </>
+              }
+            />
           </Routes>
         </div>
 
         {/* Content outside the bg-image-container */}
         <div className="outside-content">
           <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-            <Route
-              path="/products"
-              element={<Products />}
-            />
-            <Route
-              path="/contact"
-              element={<Contact />}
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/application" element={<Application />} />
           </Routes>
         </div>
       </div>
+
+      <Footer />
     </Router>
   );
 }

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './App.css';
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-transparent">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="/">
           My React App
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -33,19 +33,44 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link fs-6 mx-3" to="/">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link fs-6 mx-3 ${isActive ? 'active' : ''}`
+                }
+                to="/"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-6 mx-3" to="/products">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link fs-6 mx-3 ${isActive ? 'active' : ''}`
+                }
+                to="/products"
+              >
                 Products
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-6 mx-3" to="/contact">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link fs-6 mx-3 ${isActive ? 'active' : ''}`
+                }
+                to="/application"
+              >
+                Application
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link fs-6 mx-3 ${isActive ? 'active' : ''}`
+                }
+                to="/contact"
+              >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

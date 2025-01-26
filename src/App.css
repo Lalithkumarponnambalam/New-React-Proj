@@ -45,10 +45,11 @@
 }
 
 .hero-section p {
-  font-size: 1rem;
   font-weight: 300;
   z-index: 2;
   margin-top: 10px;
+  width: 40%;
+  font-size: 1rem;
 }
 
 .hero-section > * {
@@ -133,6 +134,15 @@
   border-color: #ced4da;
 }
 
+/* application page styles */
+.card-body.custom-background {
+  background: #F6F6F6;
+}
+
+.table-responsive {
+  width: 70%;
+}
+
 @media (max-width: 991.98px) {
   .collapse.navbar-collapse {
     background-color: white;
@@ -149,5 +159,17 @@
 
   .why-title {
     width: 100%;
+  }
+
+  .table-responsive {
+    width: 100%;
+  }
+
+  .hero-section p {
+    font-weight: 300;
+    z-index: 2;
+    margin-top: 10px;
+    width: 90%;
+    font-size: 14px;
   }
 }
